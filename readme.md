@@ -30,7 +30,7 @@ Create a .env file on Backend directory with following environment variables (re
 `PORT=3030`\
 `DATETIMEAPI=http://worldclockapi.com/api/json/:timeType/now`
 
- >> All of these values are required for the well functioning of the API
+ > All of these values are required for the well functioning of the API
 
 > ## Starting
 
