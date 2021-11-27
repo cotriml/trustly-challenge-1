@@ -1,0 +1,17 @@
+version: "3"
+services:
+  api:
+    container_name: trustly-challenge-1
+    image: node:12
+    working_dir: /usr/src/trustly-challenge-1
+    restart: always
+    command: bash -c "npm install --only=prod && npm install -D nodemon && npm run debug"
+    environment:
+    - PORT=3030
+    - DATETIMEAPI=http://worldclockapi.com/api/json/:timeType/now
+    volumes:
+      - ./dist/:/usr/src/trustly-challenge-1/dist/
+      - ./package.json:/usr/src/trustly-challenge-1/package.json
+    ports:
+      - "3030:3030"
+      - "9222:9222"

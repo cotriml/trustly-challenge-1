@@ -1,0 +1,60 @@
+swagger: "2.0"
+info:
+  description: "This is a simple API to do a proxy call to World Clock API"
+  version: "1.0.0"
+  title: "Trustly Challenge 1"
+  contact:
+    email: "lucascotrim3@hotmail.com"
+host: "localhost:3030"
+tags:
+- name: "Date Time"
+  description: "Endpoint used to get current Date Time"
+schemes:
+- "http"
+paths:
+  /date-time/{timeType}:
+    get:
+      tags:
+      - "Date Time"
+      summary: "Get current Date Time"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "timeType"
+        in: "path"
+        description: "The type of the time you want to get (utc or est)"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/DateTime"
+        "500":
+          description: "Internal Server Error"
+definitions:
+  DateTime:
+    type: "object"
+    properties:
+      $id:
+        type: "string"
+      currentDateTime:
+        type: "string"
+      utcOffset:
+        type: "string"
+      isDayLightSavingsTime:
+        type: "string"
+      dayOfTheWeek:
+        type: "string"
+      timeZoneName:
+        type: "string"
+      currentFileTime:
+        type: "integer"
+        format: "int32"
+      ordinalDate:
+        type: "string"
+      serviceResponse:
+        type: "string"
