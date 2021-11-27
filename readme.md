@@ -32,7 +32,6 @@ Create a .env file on Backend directory with following environment variables (re
 
  > All of these values are required for the well functioning of the API
 
-If it is your first time starting the application, it will automatically create a root admin user on database. All routes are protected and need authentication. 
 
 > ## Starting
 
