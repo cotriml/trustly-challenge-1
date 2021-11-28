@@ -1,6 +1,6 @@
 # Trustly Challenge 1
 
-I built this application to consume an API and show its results. I used nodejs as backend to make a proxy call to World Clock API and return its response. For the frontend I used simple HTML and JS code with Jquery (to manipulate HTML elements) and Axios (to make HTTP requests) libs. 
+This application was created to consume an API and show its results. It uses nodejs as backend to make a proxy call to World Clock API and return its response. For the frontend uses simple HTML and JS code with Jquery (to manipulate HTML elements) and Axios (to make HTTP requests) libs. 
 
 > Developed by Lucas Cotrim Machado 
 
